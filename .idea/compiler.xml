@@ -24,11 +24,15 @@
         <processorPath useClasspath="true" />
         <module name="chatroom" />
         <module name="com.practice.chatroom" />
+        <module name="nio" />
+        <module name="practice" />
+        <module name="work" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="chatroom" target="1.5" />
-      <module name="com.practice.chatroom" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="nio" target="1.8" />
+      <module name="practice" target="1.8" />
+      <module name="work" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

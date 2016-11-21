@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/nio/nio.iml" filepath="$PROJECT_DIR$/nio/nio.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/practice.iml" filepath="$PROJECT_DIR$/.idea/practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/work/work.iml" filepath="$PROJECT_DIR$/work/work.iml" />
     </modules>
   </component>
 </project>
