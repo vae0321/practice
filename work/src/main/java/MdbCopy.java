@@ -9,8 +9,8 @@ import java.util.Arrays;
  */
 public class MdbCopy {
     public static void main(String[] args) throws Exception{
-        String inputFolderPath = "Z:\\20161118\\飞凡\\飞凡数据上线";
-        String outFolderPath = "Z:\\20161118\\飞凡";
+        String inputFolderPath = "E:\\MapUpload\\20161206\\飞凡2\\飞凡数据";
+        String outFolderPath = "E:\\MapUpload\\20161206\\飞凡2\\mdb";
         File inputFolder = new File(inputFolderPath);
         File[] subFolders = inputFolder.listFiles();
         FilenameFilter fileFilter = (dir, name) -> name.endsWith(".mdb");

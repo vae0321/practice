@@ -22,14 +22,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="brand-fetcher" />
         <module name="chatroom" />
         <module name="com.practice.chatroom" />
         <module name="nio" />
-        <module name="practice" />
         <module name="work" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="brand-fetcher" target="1.8" />
       <module name="nio" target="1.8" />
       <module name="practice" target="1.8" />
       <module name="work" target="1.8" />
