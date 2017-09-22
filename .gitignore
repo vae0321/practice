@@ -1,6 +1,38 @@
 # Created by .ignore support plugin (hsz.mobi)
-work/target/
-/work/work.iml
-/nio/nio.iml
-/brand-fetcher/brand-fetcher.iml
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/sunflower-github.iml
+.idea/workspace.xml
+target/generated-sources/
+target/generated-test-sources/
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/libraries/
 /.idea/
+*.iml
+/target/
