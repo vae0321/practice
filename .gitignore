@@ -35,4 +35,4 @@ target/generated-test-sources/
 .idea/libraries/
 /.idea/
 *.iml
-/target/
+*/target/
