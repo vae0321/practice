@@ -24,15 +24,9 @@
 hs_err_pid*
 
 .gitignore
-.idea/misc.xml
-.idea/modules.xml
 .idea/sunflower-github.iml
-.idea/workspace.xml
 target/generated-sources/
 target/generated-test-sources/
-.idea/compiler.xml
-.idea/encodings.xml
-.idea/libraries/
 /.idea/
 *.iml
 */target/
