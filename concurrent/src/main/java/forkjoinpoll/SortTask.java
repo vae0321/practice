@@ -81,7 +81,8 @@ public class SortTask extends RecursiveTask<int[]> {
         ForkJoinPool forkJoinPool = new ForkJoinPool();
         ForkJoinTask result = forkJoinPool.submit(sortTask);
         try {
-            result.get();
+            int[] array = (int[]) result.get();
+            System.out.println("Final Result: " + sortTask.toString(array));
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
