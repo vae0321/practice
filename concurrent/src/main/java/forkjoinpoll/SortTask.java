@@ -60,19 +60,10 @@ public class SortTask extends RecursiveTask<int[]> {
 
             tmpC++;
         }
-        System.out.println("left array: " + toString(leftArray) +
-                "\nright array: " + toString(rightArray) +
-                "\n---sort result: " + toString(tmp));
+        System.out.println("left array: " + Arrays.toString(leftArray) +
+                "\nright array: " + Arrays.toString(rightArray) +
+                "\n---sort result: " + Arrays.toString(tmp));
         return tmp;
-    }
-
-    private String toString(@NonNull int[] array) {
-        StringBuilder sb = new StringBuilder("{ ");
-        for (int i : array) {
-            sb.append(i).append(" ");
-        }
-        sb.append("}");
-        return sb.toString();
     }
 
     public static void main(String[] args) {
@@ -82,7 +73,7 @@ public class SortTask extends RecursiveTask<int[]> {
         ForkJoinTask result = forkJoinPool.submit(sortTask);
         try {
             int[] array = (int[]) result.get();
-            System.out.println("Final Result: " + sortTask.toString(array));
+            System.out.println("Final Result: " + Arrays.toString(array));
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
