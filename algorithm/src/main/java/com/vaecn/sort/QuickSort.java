@@ -37,11 +37,11 @@ public class QuickSort {
     public static int partition(int[] array, int low, int high) {
         int base = array[low];
         while (low < high) {
-            while (array[high] >= base && low < high) {
+            while (low < high && array[high] >= base) {
                 high--;
             }
             array[low] = array[high];
-            while (array[low] < base && low < high) {
+            while (low < high && array[low] < base) {
                 low++;
             }
             array[high] = array[low];
@@ -61,10 +61,10 @@ public class QuickSort {
     public static int partition3(int[] array, int low, int high) {
         int base = array[low];
         while (low < high) {
-            while (array[high] >= base && low < high) {
+            while (low < high && array[high] >= base) {
                 high--;
             }
-            while (array[low] < base && low < high) {
+            while (low < high && array[low] < base) {
                 low++;
             }
             SortUtils.swap(array, low, high);
