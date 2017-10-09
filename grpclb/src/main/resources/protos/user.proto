@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_package = "com.vaecn.grpclb.server";
+option java_outer_classname = "UserRpcServiceProto";
+option java_multiple_files = false;
+
+service UserRpcService {
+    rpc getAllUsers (GetAllUsersRequest) returns (Users) {
+    }
+    rpc addUser (AddUserRequest) returns (User) {
+    }
+}
+
+message GetAllUsersRequest {
+}
+
+message AddUserRequest {
+    string name = 1;
+}
+
+message Users {
+    repeated User user = 1;
+}
+
+message User {
+    int64 id = 1;
+    string name = 2;
+}

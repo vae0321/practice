@@ -14,6 +14,7 @@
         <module>work</module>
         <module>concurrent</module>
         <module>algorithm</module>
+        <module>grpclb</module>
     </modules>
 
     <properties>
@@ -22,6 +23,7 @@
         <java.version>1.8</java.version>
         <log4j2.version>2.6.2</log4j2.version>
         <hibernate.version>5.2.5.Final</hibernate.version>
+        <mysql.version>6.0.6</mysql.version>
         <commons.io.version>1.3.2</commons.io.version>
         <lombok.version>1.16.10</lombok.version>
         <junit.version>4.12</junit.version>
@@ -44,6 +46,12 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-spatial</artifactId>
                 <version>${hibernate.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -107,6 +115,13 @@
     </dependencies>
 
     <build>
+        <extensions>
+            <extension>
+                <groupId>kr.motd.maven</groupId>
+                <artifactId>os-maven-plugin</artifactId>
+                <version>1.5.0.Final</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
