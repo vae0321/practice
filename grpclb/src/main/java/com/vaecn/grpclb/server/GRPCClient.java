@@ -4,10 +4,12 @@ import com.vaecn.grpclb.discovery.ZookeeperZoneAwareNameResolverProvider;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.util.RoundRobinLoadBalancerFactory;
+import lombok.extern.log4j.Log4j2;
 
 /**
  * Created by sifan on 2017/10/10.
  */
+@Log4j2
 public class GRPCClient {
     public static void main(String[] args) {
         ManagedChannel channel = ManagedChannelBuilder.forTarget("zk://helloService")
@@ -22,7 +24,7 @@ public class GRPCClient {
         HelloRpcServiceProto.SayHelloResponse response = stub.sayHello(HelloRpcServiceProto.SayHelloRequest.newBuilder()
                 .setRequest("hello gRPC !")
                 .build());
-        System.out.println(response.getResponse());
+        log.info("response: {}", response.getResponse());
 
         channel.shutdownNow();
     }
