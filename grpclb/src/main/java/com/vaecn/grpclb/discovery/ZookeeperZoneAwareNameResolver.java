@@ -23,7 +23,6 @@ public class ZookeeperZoneAwareNameResolver extends NameResolver {
 
     public final String ZONE_KEY = "ZONE";
 
-
     private final URI targetUri;
     private final ZookeeperServiceRegistrationOps zookeeperServiceRegistry;
     private final Comparator<ZookeeperServiceRegistrationOps.HostandZone> zoneComparator;
@@ -34,7 +33,6 @@ public class ZookeeperZoneAwareNameResolver extends NameResolver {
         this.zookeeperServiceRegistry = zookeeperServiceRegistry;
         this.zoneComparator = zoneComparator;
     }
-
 
     @Override
     public String getServiceAuthority() {

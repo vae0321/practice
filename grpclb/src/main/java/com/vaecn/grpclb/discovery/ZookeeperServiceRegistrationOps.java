@@ -95,7 +95,7 @@ public class ZookeeperServiceRegistrationOps implements Closeable {
     public boolean deregister(final String serviceId, final URI uriToDeregister, final String zone) throws Exception {
         String znode = ensureNodeForServiceExists(serviceId);
         List<String> children = curatorFramework.getChildren().forPath(znode);
-        children.stream().forEach(child -> {
+        children.forEach(child -> {
             try {
                 String storedUri = new String(curatorFramework.getData().forPath(znode + ZK_DELIMETER + child));
                 if (storedUri.equals(uriToDeregister.toASCIIString()+ZONE_DELIMITER+zone)) {

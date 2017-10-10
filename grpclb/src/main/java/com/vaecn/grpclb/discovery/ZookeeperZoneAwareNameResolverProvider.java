@@ -76,7 +76,6 @@ public class ZookeeperZoneAwareNameResolverProvider extends NameResolverProvider
             return this;
         }
 
-
         public NameResolverProvider build() {
             Comparator<ZookeeperServiceRegistrationOps.HostandZone> comparator;
             if (zoneToPrefer != null) {
